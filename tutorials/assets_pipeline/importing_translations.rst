@@ -61,7 +61,10 @@ locales <doc_locales>` supported by the engine. The "KEY" tags must be
 unique and represent a string universally (they are usually in
 uppercase, to differentiate from other strings). These keys will be replaced at
 runtime by the matching translated string. Note that the case is important,
-"KEY1" and "Key1" will be different keys.
+"KEY1" and "Key1" will be different keys. Additionally, if a column's "lang"
+tag begins with an underscore (`_`), the column is considered to be "commented
+out", and won't be imported. This is useful for giving additional information
+to translators without having to worry about your game importing that info.
 The top-left cell is ignored and can be left empty or having any content.
 Here's an example:
 
